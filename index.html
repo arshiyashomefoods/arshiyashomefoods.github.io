@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Organic - Grocery Store HTML Website Template</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link type="text/css" rel="stylesheet" href="css/magicscroll.css" />
+    <script type="text/javascript" src="js/magicscroll.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+    <style>
+      /* Video container styling */
+      .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 0;
+        display: none;
+      }
+  
+      /* Video styling */
+      .intro-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the video covers the container without distortion */
+      }
+  
+      /* Mobile view adjustments */
+      @media (max-width: 767.98px) {
+        .video-container {
+          display: block;
+          height: 75vh; /* Takes up half the viewport height on mobile */
+        }
+        .intro-video {
+          height: 100%;
+        }
+      }
+  
+      /* Larger screens adjustments */
+      @media (min-width: 768px) {
+        .video-container {
+          display: none;
+        }
+      }
+
+      .order-form-container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      background: linear-gradient(135deg, #ffffff, #e8f5e9);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .order-form-container:hover {
+      transform: translateY(-5px);
+    }
+
+    .order-form-container h2 {
+      color: #2e7d32;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      font-weight: 500;
+      color: #1b5e20;
+    }
+
+    .form-control, .form-select {
+      border: 2px solid #4caf50;
+      border-radius: 8px;
+      padding: 10px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: #2e7d32;
+      box-shadow: 0 0 8px rgba(46, 125, 50, 0.3);
+      outline: none;
+    }
+
+    .btn-submit {
+      background-color: #4caf50;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      width: 100%;
+    }
+
+    .btn-submit:hover {
+      background-color: #2e7d32;
+      transform: scale(1.02);
+    }
+
+    .btn-submit:active {
+      transform: scale(0.98);
+    }
+
+    /* Mobile view adjustments */
+    @media (max-width: 576px) {
+      .order-form-container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+    </style>
+
+
+
+  </head>
+  <body>
+    
+    <section style="background-image: url('images/banner-1.jpg');background-repeat: no-repeat;background-size: cover;">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-lg-6 pt-5 mt-5">
+            <h2 class="display-1 ls-1"><span class="fw-bold text-primary">Arshiya's</span> Home Foods at your <span class="fw-bold">Doorsteps</span></h2>
+            <p class="fs-4">Nourish Your Body with our 100% Natural, Home Foods.</p>
+            <div class="d-flex gap-3">
+              <a href="#place-order" class="btn btn-primary text-uppercase fs-6 rounded-pill px-4 py-3 mt-3">Place Order</a>
+            </div>
+            <div class="row my-5">
+              <div class="col">
+                <div class="row text-dark">
+                  <div class="col-auto"><p class="fs-1 fw-bold lh-sm mb-0">1000+</p></div>
+                  <div class="col"><p class="text-uppercase lh-sm mb-0">Orders Completed</p></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row text-dark">
+                  <div class="col-auto"><p class="fs-1 fw-bold lh-sm mb-0">100+</p></div>
+                  <div class="col"><p class="text-uppercase lh-sm mb-0">Happy Customers</p></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row text-dark">
+                  <div class="col-auto"><p class="fs-1 fw-bold lh-sm mb-0">10+</p></div>
+                  <div class="col"><p class="text-uppercase lh-sm mb-0">Available in Locations</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row row-cols-1 row-cols-sm-3 row-cols-lg-3 g-0 justify-content-center">
+          <div class="col">
+            <div class="card border-0 bg-primary rounded-0 p-4 text-light">
+              <div class="row">
+                <div class="col-md-2 text-center">
+                  <svg width="60" height="60"><use xlink:href="#fresh"></use></svg>
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body p-0">
+                    <h5 class="text-light">Arshiya's Multi Millet Mix</h5>
+                    <p class="card-text">A wholesome blend of 24 grains and cereals, our Multi Millet Mix is your go-to for a healthier lifestyle.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0 bg-secondary rounded-0 p-4 text-light">
+              <div class="row">
+                <div class="col-md-2 text-center">
+                  <svg width="60" height="60"><use xlink:href="#organic"></use></svg>
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body p-0">
+                    <h5 class="text-light">Arshiya's Healthy Ragi Malt</h5>
+                    <p class="card-text">Made with ragi and 18 nutrient-rich grains, Arshiya’s Healthy Ragi Malt is a powerhouse of calcium and iron.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0 bg-danger rounded-0 p-4 text-light">
+              <div class="row">
+                <div class="col-md-2 text-center">
+                  <svg width="60" height="60"><use xlink:href="#delivery"></use></svg>
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body p-0">
+                    <h5 class="text-light">Arshiya's ABC Malt</h5>
+                    <p class="card-text">Our ABC Malt combines the goodness of apple, beetroot & carrot for a refreshing and nutrient-packed drink.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </section>
+
+
+    <div id="courses-scroll" style="background-color: transparent;" class="MagicScroll" data-options="autoplay:2000;mode:animation;items:fit;">
+          <img style="background-color: white;border:4px solid #ff6600;border-radius:20px;width:400px;" src="images/1.jpeg" />
+          <img style="background-color: white;border:4px solid #ff6600;border-radius:20px;width:400px;" src="images/2.jpeg" />
+          <!-- <img style="background-color: white;border:4px solid #ff6600;border-radius:20px;width:400px; margin:15px;" src="images/3.jpeg" /> -->
+      
+  </div>
+
+  <!-- <section class="video-section py-3">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="video-container">
+            <video class="intro-video" loop playsinline>
+              <source src="images/1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section id="place-order">
+    <div class="order-form-container">
+      <h2>Place Your Order</h2>
+      <form id="orderForm" onsubmit="submitOrder(event)">
+        <!-- Name Field -->
+        <div class="mb-3">
+          <label for="customerName" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="customerName" placeholder="Enter your name" required>
+        </div>
+  
+        <!-- Phone Number Field -->
+        <div class="mb-3">
+          <label for="customerPhone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="customerPhone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+        </div>
+  
+        <!-- Product Dropdown -->
+        <div class="mb-3">
+          <label for="productSelect" class="form-label">Select Product</label>
+          <select class="form-select" id="productSelect" required>
+            <option value="" disabled selected>Choose a product</option>
+            <option value="Multi Millet Mix">Multi Millet Mix (24 Grains)</option>
+            <option value="Healthy Ragi Malt">Healthy Ragi Malt (18 Grains)</option>
+            <option value="ABC Malt">ABC Malt (Apple, Beetroot & Carrot)</option>
+          </select>
+        </div>
+  
+        <!-- Address Field -->
+        <div class="mb-3">
+          <label for="customerAddress" class="form-label">Delivery Address</label>
+          <textarea class="form-control" id="customerAddress" rows="3" placeholder="Enter your full address" required></textarea>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-submit">Submit Order</button>
+      </form>
+    </div>
+  </section>
+
+
+    <div id="footer-bottom">
+      <div class="container-lg">
+        <div class="row">
+          <div class="text-center pt-2 copyright">
+            <p>© 2025 Arshiya's Home Foods. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+      function submitOrder(event) {
+        event.preventDefault(); // Prevent form submission
+  
+        // Get form values
+        const name = document.getElementById('customerName').value;
+        const phone = document.getElementById('customerPhone').value;
+        const product = document.getElementById('productSelect').value;
+        const address = document.getElementById('customerAddress').value;
+  
+        // Format the WhatsApp message
+        const message = `New Order: ${product} | Name: ${name} | Phone: ${phone} | Address: ${address}`;
+        const encodedMessage = encodeURIComponent(message);
+  
+        // WhatsApp API URL (using the number 7674863880)
+        const whatsappURL = `https://api.whatsapp.com/send?phone=917674863880&text=${encodedMessage}`;
+  
+        // Redirect to WhatsApp
+        window.location.href = whatsappURL;
+      }
+    </script>
+  </body>
+</html>
